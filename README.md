@@ -19,7 +19,7 @@ The default markup looks like this:
 </ul>
 ```
 
-The only thing you need to consider is the id of the input (default filter-search) and the data value of the items (default filter-value).
+The only things you need to consider is the id of the input (default filter-search) and the data value of the items (default filter-value).
 If you want to use you own id and data value, go to search-filter.js and change the following variables:
 
 ```javascript
@@ -28,6 +28,8 @@ var itemsData 	= 'filter-value'; //Data value name of the items
 ```
 
 When you're done, minify the file if you want to use the minified version in production.
+
+The filter-value should be set to the search term(s) that should be filtered. **Make sure this value is set in lowercase to not make it case sensitive**.
 
 **2. Add the javascript to your html**
 
