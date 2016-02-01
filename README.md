@@ -28,7 +28,7 @@ var itemsData 	= 'sf-value';
 
 When you're done, minify the file if you want to use the minified version in production.
 
-The filter-value should be set to the search term(s) that should be filtered. The script will transform any data values that are not lowercase into lowercase on page load, but **if you set the value dynamically after load, make sure you set this value in lowercase**.
+The filter-value should be set to the search term(s) that should be filtered. The script will transform any data values that are not lowercase into lowercase on page load, but **if you set the value dynamically after load, make sure you set this value in lowercase in order to make the filter work**.
 
 ### 2. Add the JavaScript to your HTML
 Add search-filter.min.js or search-filter.js to your HTML file depending on which one you want to use. I suggest you to use the minified version.
