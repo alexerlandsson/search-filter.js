@@ -5,7 +5,7 @@ This is a lightweight filter function to filter items on search with minimal set
 Use filter-search.js when you need a simple, lightweight filter function on your web page or application.
 
 ## How to use?
-1. **Create the html markup** 
+**1. Create the html markup** 
 
 The default markup looks like this:
 
@@ -30,7 +30,7 @@ var itemsData 	= 'filter-value'; //Data value name of the items
 
 When you're done, minify the file if you want to use the minified version in production.
 
-2. **Add the javascript to your html**
+**2. Add the javascript to your html**
 
 Add search-filter.min.js or search-filter.js to your html file depending on which one you want to use. I suggest you to use the minified version.
 
