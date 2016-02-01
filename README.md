@@ -1,5 +1,6 @@
 # filter-search.js
 This is a lightweight filter function to filter items on search with minimal setup.
+
 You can see a demo of it here: [Demo](http://htmlpreview.github.io/?https://github.com/alexerlandsson/search-filter.js/blob/master/demo.html)
 
 ## When to use?
