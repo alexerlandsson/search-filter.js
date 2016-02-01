@@ -12,7 +12,7 @@
  * 	Note: Change these varaiables to match your HTML markup
  */
 
-var inputId 	= 'search-filter'; //Id of the input
+var inputId 	= 'sf-input'; //Id of the input
 var itemsData 	= 'sf-value'; //Data value name of the items
 
 /*

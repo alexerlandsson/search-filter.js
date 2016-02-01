@@ -8,7 +8,7 @@ This is a lightweight filter function to filter items on search with minimal set
 The default markup looks like this:
 
 ```html
-<input type="text" id="search-filter" />
+<input type="text" id="sf-input" />
 <ul>
 	<li sf-value="one">One</li>
 	<li sf-value="two">Two</li>
@@ -18,11 +18,11 @@ The default markup looks like this:
 </ul>
 ```
 
-The only things you need to consider is the id of the input (default search-filter) and the data value of the items (default sf-value).
+The only things you need to consider is the id of the input (default sf-input) and the data value of the items (default sf-value).
 If you want to use you own id and data value, go to search-filter.js and change the following variables:
 
 ```javascript
-var inputId 	= 'search-filter';
+var inputId 	= 'sf-input';
 var itemsData 	= 'sf-value';
 ```
 
