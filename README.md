@@ -19,7 +19,7 @@ The default markup looks like this:
 ```
 
 The only things you need to consider is the id of the input (default sf-input) and the data value of the items (default sf-value).
-If you want to use you own id and data value, go to search-filter.js and change the following variables:
+If you want to use you own id and data value, go to *search-filter.js* and change the following variables:
 
 ```javascript
 var inputId 	= 'sf-input';
