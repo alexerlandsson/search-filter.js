@@ -12,8 +12,8 @@
  * 	Note: Change these varaiables to match your HTML markup
  */
 
-var inputId 	= 'filter-search'; //Id of the input
-var itemsData 	= 'filter-value'; //Data value name of the items
+var inputId 	= 'search-filter'; //Id of the input
+var itemsData 	= 'sf-value'; //Data value name of the items
 
 /*
  *	Filter functions
@@ -47,8 +47,8 @@ document.getElementById(inputId).onkeyup = function() {
 		filterItems[i].style.display = 'none';
 
 		//Display the items matching the search value
-		if(filterItems[i].getAttribute('filter-value').indexOf(searchVal) >= 0) {
-			filterItems[i].style.display = displayArr[i];		
+		if(filterItems[i].getAttribute(itemsData).indexOf(searchVal) >= 0) {
+			filterItems[i].style.display = displayArr[i];
 		}
 	}
 

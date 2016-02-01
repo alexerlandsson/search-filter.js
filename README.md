@@ -8,22 +8,22 @@ This is a lightweight filter function to filter items on search with minimal set
 The default markup looks like this:
 
 ```html
-<input type="text" id="filter-search" />
+<input type="text" id="search-filter" />
 <ul>
-	<li filter-value="one">One</li>
-	<li filter-value="two">Two</li>
-	<li filter-value="three">Three</li>
-	<li filter-value="four">Four</li>
-	<li filter-value="five">Five</li>
+	<li sf-value="one">One</li>
+	<li sf-value="two">Two</li>
+	<li sf-value="three">Three</li>
+	<li sf-value="four">Four</li>
+	<li sf-value="five">Five</li>
 </ul>
 ```
 
-The only things you need to consider is the id of the input (default filter-search) and the data value of the items (default filter-value).
+The only things you need to consider is the id of the input (default search-filter) and the data value of the items (default sf-value).
 If you want to use you own id and data value, go to search-filter.js and change the following variables:
 
 ```javascript
-var inputId 	= 'filter-search';
-var itemsData 	= 'filter-value';
+var inputId 	= 'search-filter';
+var itemsData 	= 'sf-value';
 ```
 
 When you're done, minify the file if you want to use the minified version in production.
