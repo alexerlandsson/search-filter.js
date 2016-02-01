@@ -1,6 +1,6 @@
 /***
  *	Name: search-filter.js
- * 	GitHub: https://github.com/alexerlandsson/filter-search.js
+ * 	GitHub: https://github.com/alexerlandsson/search-filter.js
  * 	Description: This is a lightweight filter function to filter items on search with minimal setup
  *	Date: 2016-02-01
  *	Author: Alexander Erlandsson
