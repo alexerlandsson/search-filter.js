@@ -22,6 +22,9 @@
 
 	//Array to store the item's default display property values
 	var displayArr = [];
+	
+	//Get the filter items
+	var filterItems = document.querySelectorAll('[' + itemsData + ']');
 
 	function getDisplayType(element) {
 		//Get the element's computed style
@@ -32,9 +35,7 @@
 	}
 
 	function onLoad() {
-		var filterItems = document.querySelectorAll('[' + itemsData + ']');
-
-		for(var i = 0; i < filterItems.length; i++) {
+		for (var i = 0; i < filterItems.length; i++) {
 			//Get the display property value and push it to displayArr
 			displayArr.push(getDisplayType(filterItems[i]));
 
@@ -49,10 +50,9 @@
 	document.getElementById(inputId).onkeyup = function() {
 		//Get search value and filter items
 		var searchVal = this.value.toLowerCase();
-		var filterItems = document.querySelectorAll('[' + itemsData + ']');
 
 		//Loop through each filter item
-		for(var i = 0; i < filterItems.length; i++) {
+		for (var i = 0; i < filterItems.length; i++) {
 			//Hide all items
 			filterItems[i].style.display = 'none';
 
@@ -61,7 +61,7 @@
 				filterItems[i].style.display = displayArr[i];
 			}
 		}
-	}
+	};
 
 	window.onload = onLoad();
 	
