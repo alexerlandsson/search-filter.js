@@ -3,9 +3,8 @@ This is a lightweight filter function to filter items on search with minimal set
 
 **Demo: [https://github.alexerlandsson.com/search-filter/](https://github.alexerlandsson.com/search-filter/)**
 
-## How to use?
-**1. Create the html markup** 
-
+## Quick start
+### 1. Create the html markup
 The default markup looks like this:
 
 ```html
@@ -31,8 +30,7 @@ When you're done, minify the file if you want to use the minified version in pro
 
 The filter-value should be set to the search term(s) that should be filtered. **Make sure this value is set in lowercase to not make it case sensitive**.
 
-**2. Add the javascript to your html**
-
+### 2. Add the javascript to your html
 Add search-filter.min.js or search-filter.js to your html file depending on which one you want to use. I suggest you to use the minified version.
 
 ```html
