@@ -22,8 +22,8 @@ The only things you need to consider is the id of the input (default filter-sear
 If you want to use you own id and data value, go to search-filter.js and change the following variables:
 
 ```javascript
-var inputId 	= 'filter-search'; //Id of the input
-var itemsData 	= 'filter-value'; //Data value name of the items
+var inputId 	= 'filter-search';
+var itemsData 	= 'filter-value';
 ```
 
 When you're done, minify the file if you want to use the minified version in production.
