@@ -20,10 +20,7 @@
 	 *	Filter functions
 	 */
 
-	//Array to store the item's default display property values
 	var displayArr = [];
-	
-	//Get the filter items
 	var filterItems = document.querySelectorAll('[' + itemsData + ']');
 
 	function getDisplayType(element) {
@@ -41,7 +38,7 @@
 
 			//Make the item's data value lowercase if not already set this way
 			var dataVal = filterItems[i].getAttribute(itemsData);
-			if(dataVal != dataVal.toLowerCase()) {
+			if (dataVal !== dataVal.toLowerCase()) {
 				filterItems[i].setAttribute(itemsData, dataVal.toLowerCase());
 			}
 		}
@@ -57,7 +54,7 @@
 			filterItems[i].style.display = 'none';
 
 			//Display the items matching the search value
-			if(filterItems[i].getAttribute(itemsData).indexOf(searchVal) >= 0) {
+			if (filterItems[i].getAttribute(itemsData).indexOf(searchVal) >= 0) {
 				filterItems[i].style.display = displayArr[i];
 			}
 		}
