@@ -3,10 +3,7 @@ This is a lightweight filter function to filter items on search with minimal set
 
 **Demo: [https://github.alexerlandsson.com/search-filter/](https://github.alexerlandsson.com/search-filter/)**
 
-## When to use?
-Use filter-search.js when you need a simple, lightweight filter function on your web page or application.
-
-## How to use?
+## Quick start
 **1. Create the html markup** 
 
 The default markup looks like this:
