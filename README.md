@@ -1,5 +1,5 @@
 # search-filter.js
-This is a lightweight filter function to filter items on search with minimal setup.
+This is a lightweight filter function to filter items on search with minimal setup. The script handles the show and hide functionality across different display property values (such as block, inline-block, list-item etc.) automatically and there is no need of CSS classes to change the display property value.
 
 **Demo: [https://github.alexerlandsson.com/search-filter/](https://github.alexerlandsson.com/search-filter/)**
 
