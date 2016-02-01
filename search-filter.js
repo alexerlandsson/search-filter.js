@@ -1,57 +1,68 @@
 /***
  *	Name: search-filter.js
+ *	Version: 1.1
  * 	GitHub: https://github.com/alexerlandsson/search-filter.js
- * 	Description: This is a lightweight filter function to filter items on search with minimal setup
- *	Date: 2016-02-01
- *	Author: Alexander Erlandsson
- *	Author URL: https://alexerlandsson.com
+ *	Author: Alexander Erlandsson (https://alexerlandsson.com)
+ *	License: The MIT License (MIT)
  ***/
 
-/* 
- *	Settings
- * 	Note: Change these varaiables to match your HTML markup
- */
+(function (window, document, undefined) {
+	
+	/* 
+	 *	Settings
+	 * 	Note: Change these varaiables to match your HTML markup
+	 */
 
-var inputId 	= 'sf-input'; //Id of the input
-var itemsData 	= 'sf-value'; //Data value name of the items
+	var inputId 	= 'sf-input'; //Id of the input
+	var itemsData 	= 'sf-value'; //Data value name of the items
 
-/*
- *	Filter functions
- */
+	/*
+	 *	Filter functions
+	 */
 
-//Variables to handle the default display value of items
-var displaySet = false;
-var displayArr = [];
+	//Array to store the item's default display property values
+	var displayArr = [];
 
-function getDisplayType(element) {
-	//Get the element's computed style
-	var elementStyle = element.currentStyle || window.getComputedStyle(element, "");
+	function getDisplayType(element) {
+		//Get the element's computed style
+		var elementStyle = element.currentStyle || window.getComputedStyle(element, "");
 
-	//Return the item's display type
-	return elementStyle.display;
-}
+		//Return the item's display type
+		return elementStyle.display;
+	}
 
-document.getElementById(inputId).onkeyup = function() {
-	//Get search value and filter items
-	var searchVal = this.value.toLowerCase();
-	var filterItems = document.querySelectorAll('[' + itemsData + ']');
+	function onLoad() {
+		var filterItems = document.querySelectorAll('[' + itemsData + ']');
 
-	//Loop through each filter item
-	for(var i = 0; i < filterItems.length; i++) {
-		//Get the display type and push it to displayArr
-		if (!displaySet) {
+		for(var i = 0; i < filterItems.length; i++) {
+			//Get the display property value and push it to displayArr
 			displayArr.push(getDisplayType(filterItems[i]));
-		}
 
-		//Hide all items
-		filterItems[i].style.display = 'none';
-
-		//Display the items matching the search value
-		if(filterItems[i].getAttribute(itemsData).indexOf(searchVal) >= 0) {
-			filterItems[i].style.display = displayArr[i];
+			//Make the item's data value lowercase if not already set this way
+			var dataVal = filterItems[i].getAttribute(itemsData);
+			if(dataVal != dataVal.toLowerCase()) {
+				filterItems[i].setAttribute(itemsData, dataVal.toLowerCase());
+			}
 		}
 	}
 
-	//Only get display type the first time
-	displaySet = true;
-}
+	document.getElementById(inputId).onkeyup = function() {
+		//Get search value and filter items
+		var searchVal = this.value.toLowerCase();
+		var filterItems = document.querySelectorAll('[' + itemsData + ']');
+
+		//Loop through each filter item
+		for(var i = 0; i < filterItems.length; i++) {
+			//Hide all items
+			filterItems[i].style.display = 'none';
+
+			//Display the items matching the search value
+			if(filterItems[i].getAttribute(itemsData).indexOf(searchVal) >= 0) {
+				filterItems[i].style.display = displayArr[i];
+			}
+		}
+	}
+
+	window.onload = onLoad();
+	
+})(window, document);

@@ -4,7 +4,7 @@ This is a lightweight filter function to filter items on search with minimal set
 **Demo: [https://github.alexerlandsson.com/search-filter/](https://github.alexerlandsson.com/search-filter/)**
 
 ## Quick start
-### 1. Create the html markup
+### 1. Create the HTML markup
 The default markup looks like this:
 
 ```html
@@ -28,14 +28,17 @@ var itemsData 	= 'sf-value';
 
 When you're done, minify the file if you want to use the minified version in production.
 
-The filter-value should be set to the search term(s) that should be filtered. **Make sure this value is set in lowercase to not make it case sensitive**.
+The filter-value should be set to the search term(s) that should be filtered. The script will transform any data values that are not lowercase into lowercase on page load, but **if you set the value dynamically after load, make sure you set this value in lowercase**.
 
-### 2. Add the javascript to your html
-Add search-filter.min.js or search-filter.js to your html file depending on which one you want to use. I suggest you to use the minified version.
+### 2. Add the JavaScript to your HTML
+Add search-filter.min.js or search-filter.js to your HTML file depending on which one you want to use. I suggest you to use the minified version.
 
 ```html
 <script src="search-filter.min.js"></script>
 ```
+
+## Browser Compatibility
+This script is working in every modern browser including Google Chrome, Safari, Firefox, Opera and IE8+.
 
 ## License
 The MIT License (MIT)
